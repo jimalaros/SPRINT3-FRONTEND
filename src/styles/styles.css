@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  width: 100%;
+  margin: 0;
+  align-content: center;
+  justify-content: center;
+}
+
+.d-flex {
+  margin-left: 20vh;
+}
+
+.fw-bold {
+  margin-top: 5vh;
+}
+
+.logo {
+  height: 70px;
+}
+
+.logo2 {
+  height: 70px;
+  margin:auto;
+	text-align:center;
+}
+
+.estilotitulo {
+  width: 100%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+nav {
+  background-color: black;
+  width: 100%;
+}
+
+.Superior {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.Superior .elementos {
+  display: inline-block;
+}
+
+.Movement {
+  float: right;
+}
+
+.elementos a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  padding: 15px 50px;
+  display: block;
+}
+
+.elementos a:hover {
+  background-color: rgb(253, 125, 6);
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  height: 80vh;
+  display: block;
+}
+
+.footer {
+  background-color: black;
+  position:static;
+  bottom: 0vh;
+  width: 100%;
+  height: 40px;
+  margin-top: 0%;
+  font-weight: bold;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.small{
+  text-align: center;
+}
+img.small {
+  max-height: 8rem;
+}
+
+.Productos{
+  text-align: center;
+}
+.Precios{
+  text-align: center;
+}
+
+.checkout{
+  background-color: black;
+  width: 100%;
+  margin-top:10%;
+  text-align: center;
+  font-weight: bolder;
+  color: white;
+}
+
+.checkout a:hover {
+  background-color: rgb(253, 125, 6);
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+
+.Precio{
+  text-align:center;
+}

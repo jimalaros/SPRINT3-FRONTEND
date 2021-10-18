@@ -1,0 +1,33 @@
+.h2{
+  margin: 5%;
+  font-weight: bolder;
+}
+
+.tabla {
+  width: 100%;
+  margin: 5%;
+  overflow-y: scroll;
+  justify-content: center;
+}
+
+.tabla th {
+  background-color:green;
+  color: black;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.tabla tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.tabla tr:hover {
+  background-color: rgb(102, 101, 101);
+}
+
+.busqueda{
+  justify-content: center;
+  border:black;
+  border-radius: 1rem;
+}
