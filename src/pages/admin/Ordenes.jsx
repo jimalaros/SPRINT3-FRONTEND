@@ -39,7 +39,7 @@ const Orders = () => {
     if (mostrarTabla) {
       setTextoBoton('Mostrar Todas las ordenes');
       setColorBoton('green');
-    } 
+    }
   }, [mostrarTabla]);
 
   return (
@@ -180,6 +180,8 @@ const FilaOrden = ({ orden, setEjecutarConsulta }) => {
     setOpenDialog(false);
   };
 
+  let OrdenJSON = JSON.parse(orden.producto);
+  console.log(OrdenJSON);
   return (
     <tr>
       {edit ? (
@@ -217,9 +219,9 @@ const FilaOrden = ({ orden, setEjecutarConsulta }) => {
       ) : (
         <>
           <td>{orden._id.slice(20)}</td>
-          <td>{orden.producto}</td>
-          <td>{orden.cantidad}</td>
-          <td>{orden.precio}</td>
+          <td>{OrdenJSON.name}</td>
+          <td>{OrdenJSON.qty}</td>
+          <td>{OrdenJSON.price}</td>
         </>
       )}
 

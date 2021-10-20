@@ -36,7 +36,6 @@ function SesionU() {
     };
 
     return (
-          <PrivateRoute>
             <div className="row">
                 <Headercarrito countCartItems={cartItems.length}></Headercarrito>
                 <Main products={products} onAdd={onAdd}></Main>
@@ -46,7 +45,6 @@ function SesionU() {
                     onRemove={onRemove}
                 ></Basket>
             </div>
-          </PrivateRoute>
     );
 }
 

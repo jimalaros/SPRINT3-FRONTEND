@@ -4,6 +4,7 @@ import { nanoid } from 'nanoid';
 import { Dialog, Tooltip } from '@material-ui/core';
 import { obtenerUsuarios, crearUsuario, editarUsuario, eliminarUsuario } from '../../utils/api';
 import ReactLoading from 'react-loading';
+import Nombre from '../../components/Nombre'
 
 
 const Users = () => {
@@ -376,72 +377,76 @@ const FormularioCreacionUsuarios = ({ setMostrarTabla, listaUsuarios, setUsuario
   };
 
   return (
-    <div className='flex flex-col items-center justify-center'>
-      <h2 className='text-2xl font-extrabold text-gray-800'>Crear nuevo usuario</h2>
-      <form ref={form} onSubmit={submitForm} className='flex flex-col'>
-        <label className='flex flex-col' htmlFor='nombre'>
-          Nombre del usuario
-          <input
-            name='nombre'
-            className='bg-gray-50 border border-gray-600 p-2 rounded-lg m-2'
-            type='text'
-            required
-          />
-        </label>
-        <label className='flex flex-col' htmlFor='apellido'>
-          Apellido del usuario
-          <input
-            name='apellido'
-            className='bg-gray-50 border border-gray-600 p-2 rounded-lg m-2'
-            type='text'
-            required
-          />
-        </label>
-        <label className='flex flex-col' htmlFor='correo'>
-          Correo del usuario
-          <input
-            name='correo'
-            className='bg-gray-50 border border-gray-600 p-2 rounded-lg m-2'
-            type='email'
-            required
-          />
-        </label>
-        <label className='flex flex-col' htmlFor='telefono'>
-          Telefono del usuario
-          <input
-            name='telefono'
-            className='bg-gray-50 border border-gray-600 p-2 rounded-lg m-2'
-            type='number'
-            required
-          />
-        </label>
-        <label className='flex flex-col' htmlFor='direccion'>
-          Direccion del usuario
-          <input
-            name='direccion'
-            className='bg-gray-50 border border-gray-600 p-2 rounded-lg m-2'
-            type='text'
-            required
-          />
-        </label>
-        <label className='flex flex-col' htmlFor='rol'>
-          Rol del usuario
-          <input
-            name='rol'
-            className='bg-gray-50 border border-gray-600 p-2 rounded-lg m-2'
-            type='number'
-            required
-            defaultValue={0}
-          />
-        </label>
-        <button
-          type='submit'
-          className='col-span-2 bg-green-400 p-2 rounded-full shadow-md hover:bg-green-600 text-white'
-        >
-          Guardar usuario
-        </button>
-      </form>
-    </div>
+    <Nombre>
+      <div className="flex flex-col items-center justify-center">
+        <h2 className="text-2xl font-extrabold text-gray-800">
+          Crear nuevo usuario
+        </h2>
+        <form ref={form} onSubmit={submitForm} className="flex flex-col">
+          <label className="flex flex-col" htmlFor="nombre">
+            Nombre del usuario
+            <input
+              name="nombre"
+              className="bg-gray-50 border border-gray-600 p-2 rounded-lg m-2"
+              type="text"
+              required
+            />
+          </label>
+          <label className="flex flex-col" htmlFor="apellido">
+            Apellido del usuario
+            <input
+              name="apellido"
+              className="bg-gray-50 border border-gray-600 p-2 rounded-lg m-2"
+              type="text"
+              required
+            />
+          </label>
+          <label className="flex flex-col" htmlFor="correo">
+            Correo del usuario
+            <input
+              name="correo"
+              className="bg-gray-50 border border-gray-600 p-2 rounded-lg m-2"
+              type="email"
+              required
+            />
+          </label>
+          <label className="flex flex-col" htmlFor="telefono">
+            Telefono del usuario
+            <input
+              name="telefono"
+              className="bg-gray-50 border border-gray-600 p-2 rounded-lg m-2"
+              type="number"
+              required
+            />
+          </label>
+          <label className="flex flex-col" htmlFor="direccion">
+            Direccion del usuario
+            <input
+              name="direccion"
+              className="bg-gray-50 border border-gray-600 p-2 rounded-lg m-2"
+              type="text"
+              required
+            />
+          </label>
+          <label className="flex flex-col" htmlFor="rol">
+            Rol del usuario
+            <input
+              name="rol"
+              className="bg-gray-50 border border-gray-600 p-2 rounded-lg m-2"
+              type="number"
+              required
+              defaultValue={0}
+            />
+          </label>
+          <button
+            type="submit"
+            className="col-span-2 bg-green-400 p-2 rounded-full shadow-md hover:bg-green-600 text-white"
+          >
+            Guardar usuario
+          </button>
+        </form>
+      </div>
+    </Nombre>
   );
 };
 

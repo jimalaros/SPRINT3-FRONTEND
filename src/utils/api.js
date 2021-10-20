@@ -45,14 +45,20 @@ export const obtenerOrdenes = async (successCallback, errorCallback) => {
   await axios.request(options).then(successCallback).catch(errorCallback);
 };
 
-export const crearOrden = async (data, successCallback, errorCallback) => {
-  const options = {
-    method: 'POST',
-    url: 'http://localhost:5000/ordenes/nuevas',
-    headers: { 'Content-Type': 'application/json' },
-    data,
-  };
-  await axios.request(options).then(successCallback).catch(errorCallback);
+export const crearOrden = async (data) => {
+  data.producto.map(async (item) => {
+    const options = {
+      method: 'POST',
+      url: 'http://localhost:5000/ordenes/nuevas',
+      headers: { 'Content-Type': 'application/json' },
+      data: JSON.stringify({
+        producto: item.producto,
+        cantidad: item.cantidad,
+        precio: item.precio
+      }),
+    };
+    await axios.request(options).then(console.log('Exit')).catch(console.error('Error'));
+  })
 };
 
 export const editarOrden = async (id, data, successCallback, errorCallback) => {

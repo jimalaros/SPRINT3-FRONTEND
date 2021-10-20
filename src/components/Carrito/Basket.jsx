@@ -101,7 +101,7 @@ function Basket(props) {
             </TableContainer>
             </Paper>
             <div className="checkout">
-                <button onClick={() => crearOrden()}>
+                <button onClick={() => crearOrden({producto: cartItems})}>
                   <a href="/admin/Ordenes">Confirmar Orden</a>
                 </button>
             </div>
