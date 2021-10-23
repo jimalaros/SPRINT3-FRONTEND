@@ -1,7 +1,7 @@
 import React from 'react';
-import { Table, TableBody, TableCell } from '@material-ui/core';
-import { TableContainer, TableHead, TableRow } from '@material-ui/core';
-import { Paper, Box } from '@material-ui/core';
+//import { Table, TableBody, TableCell } from '@material-ui/core';
+//import { TableContainer, TableHead, TableRow } from '@material-ui/core';
+//import { Paper, Box } from '@material-ui/core';
 import { crearOrden } from '../../utils/api';
 
 function Basket(props) {
@@ -50,61 +50,13 @@ function Basket(props) {
                 </div>
               </div>
               <hr />
+                <div className="checkout">
+                  <button onClick={() => crearOrden({producto: cartItems})}>
+                    <a href="/admin/Ordenes">Confirmar Orden</a>
+                  </button>
+                </div>
             </>
           )}
-        </div>
-        <div>
-        <Paper className="checkout">
-          <TableContainer>
-            <Table
-              stickyHeader
-              aria-label="sticky table"
-            >
-            <TableHead>
-            <TableRow>
-            <TableCell style={{ minWidth: 170 }}>
-            Producto
-            </TableCell>
-            <TableCell
-              align="right"
-              style={{ minWidth: 100 }}
-            >
-              Cantidad
-            </TableCell>
-            <TableCell
-              align="right"
-              style={{ minWidth: 170 }}
-            >
-              Precio
-            </TableCell>
-            </TableRow>
-            </TableHead>
-            <TableBody>
-              {cartItems.map((item) => {
-                return (
-                  <TableRow key={item.id}>
-                  <TableCell>{item.name}</TableCell>
-                  <TableCell align="right">
-                    {item.qty}
-                  </TableCell>
-                  <TableCell align="right">
-                    {item.qty} x ${item.price.toFixed(2)}
-                  </TableCell>
-                  </TableRow>
-                )
-              })}
-            </TableBody>
-            </Table>
-            <Box display="flex" justifyContent="flex-end" p={1}>
-              Precio Total: ${totalPrice}
-            </Box>
-            </TableContainer>
-            </Paper>
-            <div className="checkout">
-                <button onClick={() => crearOrden({producto: cartItems})}>
-                  <a href="/admin/Ordenes">Confirmar Orden</a>
-                </button>
-            </div>
         </div>
       </aside>
     );

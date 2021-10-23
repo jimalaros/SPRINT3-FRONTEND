@@ -4,7 +4,7 @@ import Headercarrito from '../../components/Carrito/Headercarrito';
 import Main from '../../components/Carrito//Main';
 import Basket from '../../components/Carrito//Basket';
 import data from '../../components/data';
-import PrivateRoute from '../../components/PrivateRoute';
+//import PrivateRoute from '../../components/PrivateRoute';
 import '../../styles/carrito.css';
 
 function SesionU() {

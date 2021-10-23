@@ -11,12 +11,12 @@ const SidebarAdmin = () => {
         <ul>
             <section class="home">
             <br/>
-            <li className="nav-item"><a href="./Principal" className="list-group-item list-group-item-action bg-dark p-2 border 0"><FaIcons.FaUser className="me-3"/>Principal</a></li>
-            <li className="nav-item"><a href="./Ordenes" className="list-group-item list-group-item-action bg-dark p-2 border 0"><FaIcons.FaChartLine className="me-3"/>Ordenes</a></li>
-            <button onClick={() => logout({ returnTo: 'http://localhost:3000' })}>Cerrar Sesión</button>
-            <br/>
-            <li className="nav-item"><a href="/Index" className="list-group-item list-group-item-action bg-dark p-2 border 0"><FaIcons.FaHome className="me-3"/>Home</a></li>
-            <br/>
+            <li className="nav-item"><a href="../"><FaIcons.FaHome className="Iconos"/>Inicio</a></li>
+            <li className="nav-item"><a href="./Ordenes"><FaIcons.FaBoxOpen className="Iconos"/>Ordenes</a></li>
+            <br />
+            <div>
+              <button onClick={() => logout({ returnTo: 'http://localhost:3000' })}>Cerrar Sesión</button>
+            </div>
             </section>
         </ul>
     </div>

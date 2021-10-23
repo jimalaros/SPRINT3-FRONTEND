@@ -11,11 +11,11 @@
 }
 
 .tabla th {
-  background-color:green;
-  color: black;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  background-color:black;
+  color: white;
+  padding: 10px 10px;
   text-align: center;
+  min-width: 10px;
 }
 
 .tabla tr:nth-child(even) {
@@ -23,11 +23,15 @@
 }
 
 .tabla tr:hover {
-  background-color: rgb(102, 101, 101);
+  background-color: #ffe100;
 }
 
 .busqueda{
   justify-content: center;
   border:black;
   border-radius: 1rem;
+}
+
+.tabla td{
+  text-align: center;
 }

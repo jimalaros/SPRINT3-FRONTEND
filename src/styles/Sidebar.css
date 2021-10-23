@@ -67,3 +67,10 @@ section.home{
     background: #bbbbbb;
     border-radius: 10px;
 }
+
+.nav-item{
+    text-align: center;
+}
+    .Iconos{
+        margin-left: 18vh;
+    }

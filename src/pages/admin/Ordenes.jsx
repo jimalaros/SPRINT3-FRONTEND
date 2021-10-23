@@ -4,6 +4,7 @@ import { nanoid } from 'nanoid';
 import { Dialog, Tooltip } from '@material-ui/core';
 import { obtenerOrdenes, editarOrden, eliminarOrden } from '../../utils/api';
 import ReactLoading from 'react-loading';
+import '../../styles/tabla.css'
 
 const Orders = () => {
   const [mostrarTabla, setMostrarTabla] = useState(true);
@@ -38,14 +39,14 @@ const Orders = () => {
   useEffect(() => {
     if (mostrarTabla) {
       setTextoBoton('Mostrar Todas las ordenes');
-      setColorBoton('green');
+      setColorBoton('dark');
     }
   }, [mostrarTabla]);
 
   return (
     <div className='flex h-full w-full flex-col items-center justify-start p-8'>
       <div className='flex flex-col w-full'>
-        <h2 className='text-3xl font-extrabold text-gray-900'>
+        <h2 className='text-3xl font-extrabold text-gray-900 items-center'>
           Página de administración de ordenes
         </h2>
         <button
@@ -180,8 +181,9 @@ const FilaOrden = ({ orden, setEjecutarConsulta }) => {
     setOpenDialog(false);
   };
 
-  let OrdenJSON = JSON.parse(orden.producto);
-  console.log(OrdenJSON);
+  let OrdenJSON = JSON.stringify(orden.producto[0]);
+  let Order = JSON.parse(OrdenJSON);
+  console.log('El objeto es',Order);
   return (
     <tr>
       {edit ? (
@@ -218,10 +220,10 @@ const FilaOrden = ({ orden, setEjecutarConsulta }) => {
         </>
       ) : (
         <>
-          <td>{orden._id.slice(20)}</td>
-          <td>{OrdenJSON.name}</td>
-          <td>{OrdenJSON.qty}</td>
-          <td>{OrdenJSON.price}</td>
+          <td>{orden._id.slice(19)}</td>
+          <td>{Order.name}</td>
+          <td>{Order.qty}</td>
+          <td>{Order.price}</td>
         </>
       )}
 
@@ -232,13 +234,13 @@ const FilaOrden = ({ orden, setEjecutarConsulta }) => {
                 <Tooltip title='Confirmar Edición' arrow>
                   <i
                     onClick={() => actualizarOrden()}
-                    className='fas fa-check text-green-700 hover:text-green-500'
+                    className='fas fa-check text-green-700 hover:text-black-500'
                   />
                 </Tooltip>
                 <Tooltip title='Cancelar edición' arrow>
                   <i
                     onClick={() => setEdit(!edit)}
-                    className='fas fa-ban text-yellow-700 hover:text-yellow-500'
+                    className='fas fa-ban text-black-700 hover:text-black-500'
                   />
                 </Tooltip>
               </>
@@ -247,13 +249,13 @@ const FilaOrden = ({ orden, setEjecutarConsulta }) => {
                 <Tooltip title='Editar Orden' arrow>
                   <i
                     onClick={() => setEdit(!edit)}
-                    className='fas fa-pencil-alt text-yellow-700 hover:text-yellow-500'
+                    className='fas fa-pencil-alt text-black-700 hover:text-black-500'
                   />
                 </Tooltip>
                 <Tooltip title='Eliminar Orden' arrow>
                   <i
                     onClick={() => setOpenDialog(true)}
-                    className='fas fa-trash text-red-700 hover:text-red-500'
+                    className='fas fa-trash text-black-700 hover:text-black-500'
                   />
                 </Tooltip>
               </>
