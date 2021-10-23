@@ -39,7 +39,7 @@ const Orders = () => {
   useEffect(() => {
     if (mostrarTabla) {
       setTextoBoton('Mostrar Todas las ordenes');
-      setColorBoton('dark');
+      setColorBoton('orange');
     }
   }, [mostrarTabla]);
 
