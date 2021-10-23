@@ -4,7 +4,7 @@ const URL = 'https://backenddevstwo.herokuapp.com'
 export const obtenerUsuarios = async (successCallback, errorCallback) => {
   const options = {
     method: 'GET',
-    url: `${URL}/usuarios/`,
+    url: `${URL}/usuarios`,
   };
   await axios.request(options).then(successCallback).catch(errorCallback);
 };
@@ -12,7 +12,7 @@ export const obtenerUsuarios = async (successCallback, errorCallback) => {
 export const crearUsuario = async (data, successCallback, errorCallback) => {
   const options = {
     method: 'POST',
-    url: `${URL}/usuarios/nuevos/`,
+    url: `${URL}/usuarios/nuevos`,
     headers: { 'Content-Type': 'application/json' },
     data,
   };
@@ -22,7 +22,7 @@ export const crearUsuario = async (data, successCallback, errorCallback) => {
 export const editarUsuario = async (id, data, successCallback, errorCallback) => {
   const options = {
     method: 'PATCH',
-    url: `${URL}/usuarios/${id}/`,
+    url: `${URL}/usuarios/${id}`,
     headers: { 'Content-Type': 'application/json' },
     data,
   };
@@ -32,7 +32,7 @@ export const editarUsuario = async (id, data, successCallback, errorCallback) =>
 export const eliminarUsuario = async (id, successCallback, errorCallback) => {
   const options = {
     method: 'DELETE',
-    url: `${URL}/usuarios/Eliminar/${id}/`,
+    url: `${URL}/usuarios/Eliminar/${id}`,
     headers: { 'Content-Type': 'application/json',  },
   };
   await axios.request(options).then(successCallback).catch(errorCallback);
@@ -41,7 +41,7 @@ export const eliminarUsuario = async (id, successCallback, errorCallback) => {
 export const obtenerOrdenes = async (successCallback, errorCallback) => {
   const options = {
     method: 'GET',
-    url: `${URL}/ordenes/`,
+    url: `${URL}/ordenes`,
   };
   await axios.request(options).then(successCallback).catch(errorCallback);
 };
@@ -49,7 +49,7 @@ export const obtenerOrdenes = async (successCallback, errorCallback) => {
 export const crearOrden = async (data) => {
   const options = {
     method: 'POST',
-    url: `${URL}/ordenes/nuevas/`,
+    url: `${URL}/ordenes/nuevas`,
     headers: { 'Content-Type': 'application/json' },
     data,
   };
@@ -75,7 +75,7 @@ export const crearOrden = async (data) => {
 export const editarOrden = async (id, data, successCallback, errorCallback) => {
   const options = {
     method: 'PATCH',
-    url: `${URL}/ordenes/Editar/${id}/`,
+    url: `${URL}/ordenes/Editar/${id}`,
     headers: { 'Content-Type': 'application/json' },
     data,
   };
@@ -85,7 +85,7 @@ export const editarOrden = async (id, data, successCallback, errorCallback) => {
 export const eliminarOrden = async (id, successCallback, errorCallback) => {
   const options = {
     method: 'DELETE',
-    url: `${URL}/ordenes/Eliminar/${id}/`,
+    url: `${URL}/ordenes/Eliminar/${id}`,
     headers: { 'Content-Type': 'application/json',  },
   };
   await axios.request(options).then(successCallback).catch(errorCallback);
