@@ -12,7 +12,7 @@ export const obtenerUsuarios = async (successCallback, errorCallback) => {
 export const crearUsuario = async (data, successCallback, errorCallback) => {
   const options = {
     method: 'POST',
-    url: `${URL}/usuarios/nuevos`,
+    url: `${URL}/usuarios/nuevos/`,
     headers: { 'Content-Type': 'application/json' },
     data,
   };

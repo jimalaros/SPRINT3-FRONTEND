@@ -17,7 +17,7 @@ function App() {
     <Auth0Provider
       domain='devstwo.us.auth0.com'
       clientId='cTzOiqZucpuhCvleQXNUqJXD7eY5jnqP'
-      redirectUri='https://frontenddevstwo.herokuapp.com/'
+      redirectUri='https://frontenddevstwo.herokuapp.com'
     >
       <div className="App">
         <Router>
