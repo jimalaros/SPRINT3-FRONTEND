@@ -52,8 +52,11 @@ function Basket(props) {
               <hr />
                 <div className="checkout">
                   <button onClick={() => crearOrden({producto: cartItems})}>
-                    <a href="/admin/Ordenes">Confirmar Orden</a>
+                    <a href={() => false}>Generar Orden</a>
                   </button>
+                  <div>
+                    <a href="https://sdk.mercadopago.com/js/v2" id="mercadopago_btn">Pagar</a>
+                  </div>
                 </div>
             </>
           )}

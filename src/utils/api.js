@@ -1,5 +1,5 @@
 import axios from 'axios';
-const URL = 'https://backenddevstwo.herokuapp.com'
+const URL = 'http://localhost:5000'
 
 export const obtenerUsuarios = async (successCallback, errorCallback) => {
   const options = {

@@ -1,11 +1,9 @@
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Auth0Provider } from "@auth0/auth0-react";
-import Template1 from './layouts/Template2';
-import Template2 from './layouts/Template2';
+import Template1 from './layouts/Template1';
 import Template3 from './layouts/Template3';
-import Template4 from './layouts/Template4';
-import Inicio from './pages/admin/Inicio';
-import Ordenes from './pages/admin/Ordenes';
+//import Inicio from './pages/admin/Inicio';
+//import Ordenes from './pages/admin/Ordenes';
 import SesionU from './pages/usuarios/SesionU.jsx'
 import Users from './pages/usuarios/Users';
 import Home from './pages/Home';
@@ -31,20 +29,8 @@ function App() {
                 </Switch>
               </Template1>
             </Route>
-            <Route path={["/admin/Inicio", "/admin/Ordenes"]}>
-              <Template2>
-                <Switch>
-                  <Route path="/admin/Inicio">
-                    <Inicio />
-                  </Route>
-                  <Route path="/admin/Ordenes">
-                    <Ordenes />
-                  </Route>
-                </Switch>
-              </Template2>
-            </Route>
             <Route path={["/usuarios/Users", "/usuarios/SesionU"]}>
-              <Template4>
+              <Template1>
                 <Switch>
                   <Route path="/usuarios/SesionU">
                     <SesionU />
@@ -53,7 +39,7 @@ function App() {
                     <Users />
                   </Route>
                 </Switch>
-              </Template4>
+              </Template1>
             </Route>
             <Route path={["/*"]}>
               <Template3>
